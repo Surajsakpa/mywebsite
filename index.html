@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CricketClub Pro — Mumbai's Premier Cricket Club</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/light.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <div class="logo">
+      <img src="logo.png" alt="CricketClub Pro" class="logo-img">
+      <span class="logo-text"><span>Cricket</span>Club Pro</span>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#store">Store</a></li>
+      <li><a href="#ground-booking">Book Ground</a></li>
+      <li><a href="#membership">Membership</a></li>
+      <li><a href="#notices">Notices</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="cart-btn" onclick="toggleCart()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+        Cart <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <button class="hamburger" id="hamburger" onclick="toggleNav()"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="hero-bg-img"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge">Est. 1992 &nbsp;&middot;&nbsp; Mumbai, India</div>
+    <h1 class="hero-title">
+      <span class="ht-1">PLAY</span>
+      <span class="ht-2">LIKE A</span>
+      <span class="ht-3">CHAMPION</span>
+    </h1>
+    <p class="hero-sub">Join the premier cricket club. Book world-class grounds, train with legends, and gear up with the finest equipment.</p>
+    <div class="hero-ctas">
+      <a href="#membership" class="btn-primary">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+        Join the Club
+      </a>
+      <a href="#store" class="btn-ghost">
+        Shop Gear
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><span class="stat-num">2,400+</span><span class="stat-label">Members</span></div>
+      <div class="stat-sep"></div>
+      <div class="stat"><span class="stat-num">12</span><span class="stat-label">Grounds</span></div>
+      <div class="stat-sep"></div>
+      <div class="stat"><span class="stat-num">30+</span><span class="stat-label">Years</span></div>
+      <div class="stat-sep"></div>
+      <div class="stat"><span class="stat-num">500+</span><span class="stat-label">Products</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker-label">NOTICES</div>
+  <div class="ticker-track">
+    <div class="ticker-inner" id="tickerInner">
+      <span>Ground B maintenance on 28th March &nbsp;&bull;&nbsp; </span>
+      <span>T20 tournament registrations open — last date 5th April &nbsp;&bull;&nbsp; </span>
+      <span>Summer coaching camp starts 1st May &nbsp;&bull;&nbsp; </span>
+      <span>New bat range live — 15% off for members &nbsp;&bull;&nbsp; </span>
+      <span>AGM scheduled 10th April at 6 PM &nbsp;&bull;&nbsp; </span>
+      <span>Membership renewal deadline: 31st March &nbsp;&bull;&nbsp; </span>
+    </div>
+  </div>
+</div>
+
+<!-- FEATURES -->
+<div class="features-strip">
+  <div class="features-inner">
+    <div class="feature-item">
+      <div class="feature-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+      <div><strong>Free Delivery</strong><span>On orders above &#8377;2,000</span></div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg></div>
+      <div><strong>Easy Returns</strong><span>30-day hassle-free returns</span></div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+      <div><strong>Secure Payments</strong><span>100% encrypted transactions</span></div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div>
+      <div><strong>Authentic Products</strong><span>Official brand partnerships</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- STORE -->
+<section id="store">
+  <div class="section-header" style="max-width:1280px;text-align:left;padding:5rem 2rem 2rem">
+    <span class="section-tag">EQUIPMENT</span>
+    <h2 class="section-title">Pro Gear Store</h2>
+    <p class="section-sub">Premium cricket equipment trusted by professionals worldwide</p>
+  </div>
+  <div class="store-section">
+    <div class="store-filters">
+      <button class="filter-btn active" onclick="filterProducts('all',this)">All Products</button>
+      <button class="filter-btn" onclick="filterProducts('bat',this)">Bats</button>
+      <button class="filter-btn" onclick="filterProducts('ball',this)">Balls</button>
+      <button class="filter-btn" onclick="filterProducts('protective',this)">Protective</button>
+      <button class="filter-btn" onclick="filterProducts('apparel',this)">Apparel</button>
+      <button class="filter-btn" onclick="filterProducts('accessories',this)">Accessories</button>
+    </div>
+    <div class="products-grid" id="productsGrid"></div>
+  </div>
+</section>
+
+<!-- CART -->
+<div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+<div class="cart-sidebar" id="cartSidebar">
+  <div class="cart-header">
+    <h3>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+      Your Cart
+    </h3>
+    <button onclick="toggleCart()" class="cart-close">&times;</button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <div class="cart-empty">
+      <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#c8d0e0" stroke-width="1.5"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+      Your cart is empty<br><small style="color:var(--text3);font-size:.82rem">Add some cricket gear!</small>
+    </div>
+  </div>
+  <div class="cart-footer" id="cartFooter" style="display:none">
+    <div class="cart-total">
+      <span>Total: <strong id="cartTotal">&#8377;0</strong></span>
+      <button class="cart-clear" onclick="clearCart()">Clear all</button>
+    </div>
+    <button class="btn-primary full" onclick="showCheckout()">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+      Proceed to Checkout
+    </button>
+  </div>
+</div>
+
+<!-- PAYMENT MODAL -->
+<div class="modal-overlay" id="paymentModal" style="display:none">
+  <div class="modal payment-modal">
+    <button class="modal-close" onclick="closeModal('paymentModal')">&times;</button>
+    <h2>Secure Checkout</h2>
+    <div class="payment-steps">
+      <div class="step active" id="step1Ind">1 Details</div>
+      <div class="step-line"></div>
+      <div class="step" id="step2Ind">2 Payment</div>
+      <div class="step-line"></div>
+      <div class="step" id="step3Ind">3 Done</div>
+    </div>
+    <div id="chkStep1">
+      <h3>Delivery Details</h3>
+      <div class="form-grid2">
+        <div class="form-group"><label>Full Name</label><input type="text" id="chkName" placeholder="Your name"></div>
+        <div class="form-group"><label>Phone</label><input type="tel" id="chkPhone" placeholder="+91 xxxxxxxxxx"></div>
+      </div>
+      <div class="form-group"><label>Email</label><input type="email" id="chkEmail" placeholder="you@email.com"></div>
+      <div class="form-group"><label>Delivery Address</label><textarea id="chkAddress" rows="2" placeholder="Building, Street, City, PIN"></textarea></div>
+      <button class="btn-primary full" style="justify-content:center" onclick="nextStep(2)">Continue</button>
+    </div>
+    <div id="chkStep2" style="display:none">
+      <h3>Payment</h3>
+      <div class="payment-methods">
+        <label class="pay-method">
+          <input type="radio" name="pay" value="razorpay" checked>
+          <img src="https://razorpay.com/favicon.ico" class="payment-method-icon" alt="Razorpay">
+          Pay via Razorpay (UPI / Card / NetBanking / Wallet)
+        </label>
+      </div>
+      <div class="order-summary-mini" id="orderSummaryMini"></div>
+      <div class="form-grid2" style="margin-top:1.25rem">
+        <button class="btn-ghost full" onclick="nextStep(1)" style="color:var(--text);border-color:var(--border)">Back</button>
+        <button class="btn-primary" id="payNowBtn" onclick="processPayment()" style="justify-content:center">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          Pay Now
+        </button>
+      </div>
+    </div>
+    <div id="chkStep3" style="display:none">
+      <div class="payment-success">
+        <div class="success-icon">
+          <svg width="72" height="72" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#0a7c4e" opacity=".1"/><circle cx="12" cy="12" r="11" stroke="#0a7c4e" stroke-width="1.5"/><path d="M7.5 12.5l3 3 6-6" stroke="#0a7c4e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3 style="font-size:1.4rem;margin:.75rem 0 .5rem">Order Confirmed!</h3>
+        <p style="color:var(--text2);font-size:.9rem">Your order has been placed successfully.<br>Confirmation will be sent to your email.</p>
+        <div class="order-id">Order ID: <strong id="orderId"></strong></div>
+        <button class="btn-primary full" style="margin-top:1rem;justify-content:center" onclick="closeModal('paymentModal');clearCart()">Continue Shopping</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- GROUND BOOKING -->
+<section id="ground-booking" class="booking-section">
+  <div class="booking-bg"></div>
+  <div class="booking-inner">
+    <div class="booking-info">
+      <span class="section-tag" style="background:rgba(200,54,10,0.25);border-color:rgba(200,54,10,0.5);color:#ff8c6b">FACILITIES</span>
+      <h2 style="color:#493939">Book a Cricket Ground</h2>
+      <p style="color: #493939"></p> our world-class cricket facilities for practice, matches, and tournaments. State-of-the-art pitches with professional-grade infrastructure.</p>
+      <div class="ground-cards">
+        <div class="ground-card">
+          <div class="gc-icon-wrap"><img src="https://cdn-icons-png.flaticon.com/512/3135/3135706.png" alt="Stadium"></div>
+          <div><strong>Ground A — Main Stadium</strong><small>Full pitch · Floodlights · Seating 500 · &#8377;2,000/slot</small></div>
+        </div>
+        <div class="ground-card">
+          <div class="gc-icon-wrap"><img src="https://cdn-icons-png.flaticon.com/512/3460/3460958.png" alt="Practice Nets"></div>
+          <div><strong>Ground B — Practice Nets</strong><small>6 nets · Bowling machine · Coaches on duty · &#8377;800/slot</small></div>
+        </div>
+        <div class="ground-card">
+          <div class="gc-icon-wrap"><img src="https://cdn-icons-png.flaticon.com/512/2917/2917995.png" alt="Academy"></div>
+          <div><strong>Ground C — Academy Pitch</strong><small>Turf wicket · Youth training · Indoor facility · &#8377;1,200/slot</small></div>
+        </div>
+      </div>
+    </div>
+    <div class="booking-form-wrap">
+      <form class="form-card" id="groundBookingForm" onsubmit="submitBooking(event)">
+        <h3>Booking Request Form</h3>
+        <div class="form-group"><label>Full Name</label><input type="text" name="name" placeholder="Your name" required></div>
+        <div class="form-group"><label>Email</label><input type="email" name="email" placeholder="your@email.com" required></div>
+        <div class="form-group"><label>Phone</label><input type="tel" name="phone" placeholder="+91 xxxxxxxxxx" required></div>
+        <div class="form-grid2">
+          <div class="form-group"><label>Ground</label>
+            <select name="ground" required>
+              <option value="">Choose ground...</option>
+              <option>Ground A — Main Stadium</option>
+              <option>Ground B — Practice Nets</option>
+              <option>Ground C — Academy Pitch</option>
+            </select>
+          </div>
+          <div class="form-group"><label>Purpose</label>
+            <select name="purpose" required>
+              <option value="">Choose purpose...</option>
+              <option>Practice</option><option>Match</option><option>Tournament</option><option>Coaching</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-grid2">
+          <div class="form-group"><label>Date</label><input type="date" name="date" required></div>
+          <div class="form-group"><label>Time Slot</label>
+            <select name="slot" required>
+              <option value="">Choose slot...</option>
+              <option>6 AM – 9 AM</option><option>9 AM – 12 PM</option><option>12 PM – 3 PM</option><option>3 PM – 6 PM</option><option>6 PM – 9 PM</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group"><label>Special Requirements</label><textarea name="notes" rows="2" placeholder="Any special requirements..."></textarea></div>
+        <button type="submit" class="btn-primary full" style="justify-content:center">Submit Booking Request</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- MEMBERSHIP -->
+<section id="membership">
+  <div class="section-header" style="max-width:1280px;text-align:left;padding:5rem 2rem 2rem">
+    <span class="section-tag">JOIN US</span>
+    <h2 class="section-title">Club Membership</h2>
+    <p class="section-sub">Choose the plan that fits your cricket journey</p>
+  </div>
+  <div class="membership-section">
+    <div class="plans-grid">
+      <div class="plan-card">
+        <div class="plan-badge">STARTER</div>
+        <div class="plan-name">Starter</div>
+        <div class="plan-price">&#8377;2,499<span>/year</span></div>
+        <ul class="plan-features">
+          <li><svg class="check-icon" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" fill="#0a7c4e" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="#0a7c4e" stroke-width="1.5" stroke-linecap="round"/></svg> Club ID &amp; Member Card</li>
+          <li><svg class="check-icon" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" fill="#0a7c4e" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="#0a7c4e" stroke-width="1.5" stroke-linecap="round"/></svg> 4 Ground bookings/month</li>
+          <li><svg class="check-icon" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" fill="#0a7c4e" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="#0a7c4e" stroke-width="1.5" stroke-linecap="round"/></svg> Newsletter &amp; Notices</li>
+          <li><svg class="check-icon" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" fill="#0a7c4e" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="#0a7c4e" stroke-width="1.5" stroke-linecap="round"/></svg> 5% Store discount</li>
+          <li class="disabled"><svg class="check-icon" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" fill="#9aa5b8" opacity=".2"/><path d="M5.5 10.5l5-5M10.5 10.5l-5-5" stroke="#9aa5b8" stroke-width="1.5" stroke-linecap="round"/></svg> Coaching sessions</li>
+          <li class="disabled"><svg class="check-icon" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" fill="#9aa5b8" opacity=".2"/><path d="M5.5 10.5l5-5M10.5 10.5l-5-5" stroke="#9aa5b8" stroke-width="1.5" stroke-linecap="round"/></svg> Tournament priority</li>
+        </ul>
+        <button class="btn-ghost full" onclick="showMembershipForm('Starter')">Register Now</button>
+      </div>
+      <div class="plan-card featured">
+        <div class="popular-badge">MOST POPULAR</div>
+        <div class="plan-badge">PRO PLAYER</div>
+        <div class="plan-name">Pro Player</div>
+        <div class="plan-price">&#8377;5,999<span>/year</span></div>
+        <ul class="plan-features">
+          <li><svg class="check-icon" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" fill="#0a7c4e" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="#0a7c4e" stroke-width="1.5" stroke-linecap="round"/></svg> Everything in Starter</li>
+          <li><svg class="check-icon" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" fill="#0a7c4e" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="#0a7c4e" stroke-width="1.5" stroke-linecap="round"/></svg> 12 Ground bookings/month</li>
+          <li><svg class="check-icon" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" fill="#0a7c4e" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="#0a7c4e" stroke-width="1.5" stroke-linecap="round"/></svg> Weekly coaching sessions</li>
+          <li><svg class="check-icon" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" fill="#0a7c4e" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="#0a7c4e" stroke-width="1.5" stroke-linecap="round"/></svg> 15% Store discount</li>
+          <li><svg class="check-icon" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" fill="#0a7c4e" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="#0a7c4e" stroke-width="1.5" stroke-linecap="round"/></svg> Tournament priority</li>
+          <li><svg class="check-icon" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" fill="#0a7c4e" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="#0a7c4e" stroke-width="1.5" stroke-linecap="round"/></svg> Locker room access</li>
+          <li><svg class="check-icon" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" fill="#0a7c4e" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="#0a7c4e" stroke-width="1.5" stroke-linecap="round"/></svg> Performance tracking</li>
+        </ul>
+        <button class="btn-primary full" style="justify-content:center" onclick="showMembershipForm('Pro Player')">Register Now</button>
+      </div>
+      <div class="plan-card">
+        <div class="plan-badge">ELITE</div>
+        <div class="plan-name">Elite</div>
+        <div class="plan-price">&#8377;11,999<span>/year</span></div>
+        <ul class="plan-features">
+          <li><svg class="check-icon" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" fill="#0a7c4e" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="#0a7c4e" stroke-width="1.5" stroke-linecap="round"/></svg> Everything in Pro</li>
+          <li><svg class="check-icon" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" fill="#0a7c4e" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="#0a7c4e" stroke-width="1.5" stroke-linecap="round"/></svg> Unlimited bookings</li>
+          <li><svg class="check-icon" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" fill="#0a7c4e" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="#0a7c4e" stroke-width="1.5" stroke-linecap="round"/></svg> Personal coach assigned</li>
+          <li><svg class="check-icon" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" fill="#0a7c4e" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="#0a7c4e" stroke-width="1.5" stroke-linecap="round"/></svg> 25% Store discount</li>
+          <li><svg class="check-icon" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" fill="#0a7c4e" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="#0a7c4e" stroke-width="1.5" stroke-linecap="round"/></svg> VIP lounge access</li>
+          <li><svg class="check-icon" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" fill="#0a7c4e" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="#0a7c4e" stroke-width="1.5" stroke-linecap="round"/></svg> Kit sponsorship eligible</li>
+          <li><svg class="check-icon" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" fill="#0a7c4e" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="#0a7c4e" stroke-width="1.5" stroke-linecap="round"/></svg> Priority tournament slots</li>
+        </ul>
+        <button class="btn-ghost full" onclick="showMembershipForm('Elite')">Register Now</button>
+      </div>
+    </div>
+
+    <div class="batch-section">
+      <h3>Training Batch Registration</h3>
+      <p>Enrol in structured coaching programs led by ex-professional players</p>
+      <div class="batches-grid">
+        <div class="batch-card" onclick="showBatchForm('Junior Academy (Ages 8-14)')">
+          <div class="batch-icon-wrap"><img src="https://cdn-icons-png.flaticon.com/512/3135/3135823.png" alt="Junior"></div>
+          <div><strong>Junior Academy</strong><small>Ages 8–14 · Mon/Wed/Fri · 5–7 PM</small></div>
+          <span class="batch-seats">12 left</span>
+        </div>
+        <div class="batch-card" onclick="showBatchForm('Youth Development (Ages 15-18)')">
+          <div class="batch-icon-wrap"><img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Youth"></div>
+          <div><strong>Youth Development</strong><small>Ages 15–18 · Tue/Thu/Sat · 4–7 PM</small></div>
+          <span class="batch-seats">8 left</span>
+        </div>
+        <div class="batch-card" onclick="showBatchForm('Senior Performance')">
+          <div class="batch-icon-wrap"><img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt="Senior"></div>
+          <div><strong>Senior Performance</strong><small>18+ · Mon–Sat · 6–9 AM</small></div>
+          <span class="batch-seats">5 left</span>
+        </div>
+        <div class="batch-card" onclick="showBatchForm('Womens Cricket')">
+          <div class="batch-icon-wrap"><img src="https://cdn-icons-png.flaticon.com/512/3135/3135731.png" alt="Womens"></div>
+          <div><strong>Women's Cricket</strong><small>All ages · Sat/Sun · 7–10 AM</small></div>
+          <span class="batch-seats">15 left</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NOTICES -->
+<section id="notices">
+  <div class="section-header" style="max-width:1280px;text-align:left;padding:5rem 2rem 2rem">
+    <span class="section-tag">UPDATES</span>
+    <h2 class="section-title">Club Notices</h2>
+    <p class="section-sub">Stay updated with the latest club announcements</p>
+  </div>
+  <div class="notices-section">
+    <div class="notices-grid" id="noticesGrid"></div>
+  </div>
+</section>
+
+<!-- MEMBERSHIP MODAL -->
+<div class="modal-overlay" id="membershipModal" style="display:none">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('membershipModal')">&times;</button>
+    <h2>Member Registration</h2>
+    <h4 id="selectedPlan" style="color:var(--accent);margin-bottom:1.25rem;font-size:.95rem;font-weight:600"></h4>
+    <form onsubmit="submitMembership(event)">
+      <div class="form-grid2">
+        <div class="form-group"><label>First Name</label><input type="text" placeholder="Sachin" required></div>
+        <div class="form-group"><label>Last Name</label><input type="text" placeholder="Tendulkar" required></div>
+      </div>
+      <div class="form-group"><label>Email</label><input type="email" placeholder="your@email.com" required></div>
+      <div class="form-group"><label>Phone</label><input type="tel" placeholder="+91 98765 43210" required></div>
+      <div class="form-grid2">
+        <div class="form-group"><label>Date of Birth</label><input type="date" required></div>
+        <div class="form-group"><label>Playing Role</label>
+          <select required><option value="">Select...</option><option>Batsman</option><option>Bowler</option><option>All-rounder</option><option>Wicket-keeper</option></select>
+        </div>
+      </div>
+      <div class="form-group"><label>Address</label><textarea rows="2" placeholder="Your address..." required></textarea></div>
+      <button type="submit" class="btn-primary full" style="justify-content:center">Complete Registration</button>
+    </form>
+  </div>
+</div>
+
+<!-- BATCH MODAL -->
+<div class="modal-overlay" id="batchModal" style="display:none">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('batchModal')">&times;</button>
+    <h2>Batch Registration</h2>
+    <h4 id="selectedBatch" style="color:var(--accent);margin-bottom:1.25rem;font-size:.95rem;font-weight:600"></h4>
+    <form onsubmit="submitBatch(event)">
+      <div class="form-grid2">
+        <div class="form-group"><label>Full Name</label><input type="text" placeholder="Player name" required></div>
+        <div class="form-group"><label>Age</label><input type="number" placeholder="Age" min="6" max="60" required></div>
+      </div>
+      <div class="form-group"><label>Guardian Name (if under 18)</label><input type="text" placeholder="Guardian name"></div>
+      <div class="form-group"><label>Phone</label><input type="tel" placeholder="+91 xxxxxxxxxx" required></div>
+      <div class="form-group"><label>Email</label><input type="email" placeholder="email@example.com" required></div>
+      <div class="form-group"><label>Experience Level</label>
+        <select required><option value="">Select...</option><option>Beginner</option><option>Intermediate</option><option>Advanced</option></select>
+      </div>
+      <button type="submit" class="btn-primary full" style="justify-content:center">Register for Batch</button>
+    </form>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo-wrap">
+        <img src="logo.png" alt="CricketClub Pro" class="footer-logo-img">
+        <span class="footer-brand-name"><span>Cricket</span>Club Pro</span>
+      </div>
+      <p>The premier cricket club in Mumbai. Building champions since 1992 with world-class facilities and professional coaching.</p>
+      <div class="social-links">
+        <a href="https://facebook.com" target="_blank" class="social-link" title="Facebook">
+          <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="https://instagram.com" target="_blank" class="social-link" title="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#e2e8f4" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+        <a href="https://twitter.com" target="_blank" class="social-link" title="Twitter / X">
+          <svg viewBox="0 0 24 24"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+        </a>
+        <a href="https://youtube.com" target="_blank" class="social-link" title="YouTube">
+          <svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#0f1825"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <a href="#store"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg> Store</a>
+      <a href="#ground-booking"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg> Book Ground</a>
+      <a href="#membership"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> Membership</a>
+      <a href="#notices"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 0 1-3.46 0"/></svg> Notices</a>
+    </div>
+    <div class="footer-links">
+      <h4>Support</h4>
+      <a href="#"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3M12 17h.01"/></svg> FAQ</a>
+      <a href="#"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg> Refund Policy</a>
+      <a href="#"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Privacy Policy</a>
+      <a href="#"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg> Terms of Service</a>
+      <a href="#"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.24h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Contact Us</a>
+    </div>
+    <div class="footer-contact">
+      <h4>Contact</h4>
+      <p><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Cricketclub Ground, Vikhroli west, Mumbai 400079</p>
+      <p><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.24h3a2 2 0 0 1 2 1.72c.128.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.572 2.81.7A2 2 0 0 1 22 16.92z"/></svg> +91 9321779561</p>
+      <p><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> info@cricketclubpro.in</p>
+      <p><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Mon–Sat: 6 AM – 10 PM</p>
+      <p><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg> Free parking available</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 CricketClub Pro. All rights reserved.</p>
+    <div class="payment-icons">
+      <span>We accept:</span>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/200px-Visa_Inc._logo.svg.png" alt="Visa" style="height:18px;filter:brightness(0) invert(.55)">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/200px-Mastercard-logo.svg.png" alt="Mastercard" style="height:22px;opacity:.5">
+      <span class="payment-chip">UPI</span>
+      <span class="payment-chip">NetBanking</span>
+      <span class="payment-chip">Razorpay</span>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+<script src="js/script.js"></script>
+</body>
+</html>
